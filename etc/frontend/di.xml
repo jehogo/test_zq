@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <!--
 /**
-* Inchoo_Stripe DI definitions
+* PayZQ DI definitions
 *
 * @category    Inchoo
-* @package     Inchoo_Stripe
+* @package     PayZQ
 * @author      Ivan Weiler & Stjepan Udovičić
 * @copyright   Inchoo (http://inchoo.net)
 * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
@@ -12,10 +12,10 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
 
-    <virtualType name="Inchoo\Stripe\Model\ConfigProvider" type="Magento\Payment\Model\CcGenericConfigProvider">
+    <virtualType name="PayZQ\Model\ConfigProvider" type="Magento\Payment\Model\CcGenericConfigProvider">
         <arguments>
             <argument name="methodCodes" xsi:type="array">
-                <item name="inchoo_stripe" xsi:type="const">Inchoo\Stripe\Model\Payment::CODE</item>
+                <item name="payzq" xsi:type="const">PayZQ\Model\Payment::CODE</item>
             </argument>
         </arguments>
     </virtualType>
@@ -23,7 +23,7 @@
     <type name="Magento\Checkout\Model\CompositeConfigProvider">
         <arguments>
             <argument name="configProviders" xsi:type="array">
-                <item name="inchoo_stripe_config_provider" xsi:type="object">Inchoo\Stripe\Model\ConfigProvider</item>
+                <item name="payzq_config_provider" xsi:type="object">PayZQ\Model\ConfigProvider</item>
             </argument>
         </arguments>
     </type>

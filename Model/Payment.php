@@ -13,7 +13,7 @@ namespace Inchoo\Stripe\Model;
 
 class Payment extends \Magento\Payment\Model\Method\Cc
 {
-    const CODE = 'inchoo_stripe';
+    const CODE = 'payzq';
 
     protected $_code = self::CODE;
 
